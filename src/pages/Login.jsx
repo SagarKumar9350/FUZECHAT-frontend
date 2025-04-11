@@ -62,8 +62,12 @@ const Login = () => {
       toast.success(data.message,{
         id:toastId,
       });
+      // } catch (error) {
+      //   toast.error(error?.response?.data?.message || "Something went wrong",{
+      //     id:toastId,
+      //   });
       } catch (error) {
-        toast.error(error?.response?.data?.message || "Something went wrong",{
+        toast.error("Something went wrong while logging in",{
           id:toastId,
         });
 
